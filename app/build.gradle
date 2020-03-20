@@ -32,6 +32,5 @@ dependencies {
 
     // maybe need to remove
     //implementation 'com.google.android.gms:play-services-location:15.0.1'
-
     //implmentation "com.google.android.gms:play-services-location:11.0.1"
 }
