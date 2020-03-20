@@ -61,9 +61,26 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
+//        client.getLastLocation().addOnSuccessListener(this, new OnSuccessListener<Location>() {
+//            @Override
+//            public void onSuccess(Location location) {
+//                // Got last known location. In some rare situations this can be null.
+//                if (location != null) {
+//                    String msg = "New Latitude1: " + location.getLatitude() + " New Longitude1: " + location.getLongitude();
+//                    System.out.println(msg);
+//
+//                    Context context = getApplicationContext();
+//                    CharSequence text = msg;
+//                    int duration = Toast.LENGTH_SHORT;
+//
+//                    Toast toast = Toast.makeText(context, text, duration);
+//                    toast.show();
+//                    // Logic to handle location object
+//                }
+//            }
+//        });
 //        while (true) {
-//            client.getLastLocation()
-//                    .addOnSuccessListener(this, new OnSuccessListener<Location>() {
+//            client.getLastLocation().addOnSuccessListener(this, new OnSuccessListener<Location>() {
 //                        @Override
 //                        public void onSuccess(Location location) {
 //                            // Got last known location. In some rare situations this can be null.
@@ -84,21 +101,21 @@ public class MainActivity extends AppCompatActivity {
 //        }
 
         LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        android.location.Location location = null;
-        while (true) {
-            //System.out.println(lm.GPS_PROVIDER);
-            location = lm.getLastKnownLocation(lm.GPS_PROVIDER);
-            //Location l = location.getResult();
-            String msg = "New Latitude1: " + location.getLatitude() + " New Longitude1: " + location.getLongitude();
-            System.out.println(msg);
-
-            Context context = getApplicationContext();
-            CharSequence text = msg;
-            int duration = Toast.LENGTH_SHORT;
-
-            Toast toast = Toast.makeText(context, text, duration);
-            toast.show();
-        }
+//        android.location.Location location = null;
+//        while (true) {
+//            //System.out.println(lm.GPS_PROVIDER);
+//            location = lm.getLastKnownLocation(lm.GPS_PROVIDER);
+//            //Location l = location.getResult();
+//            String msg = "New Latitude1: " + location.getLatitude() + " New Longitude1: " + location.getLongitude();
+//            System.out.println(msg);
+//
+//            Context context = getApplicationContext();
+//            CharSequence text = msg;
+//            int duration = Toast.LENGTH_SHORT;
+//
+//            Toast toast = Toast.makeText(context, text, duration);
+//            toast.show();
+//        }
 //        Criteria criteria = new Criteria();
 //        criteria.setAccuracy(Criteria.ACCURACY_FINE);
 //
@@ -144,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
         // ????????????
         //3 seconds and 10 meters
         //Location loc = getLastKnownLocation(LocationManager.GPS_PROVIDER);
-        //lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, locationListener);
+        lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, locationListener);
         //Task<Location> l = client.getLastLocation();
         //double longitude = location.getLongitude();
         //double latitude = location.getLatitude();
