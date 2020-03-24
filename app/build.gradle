@@ -1,7 +1,5 @@
 apply plugin: 'com.android.application'
 
-apply plugin: 'com.google.gms.google-services'
-
 android {
     compileSdkVersion 28
     buildToolsVersion "29.0.2"
@@ -26,16 +24,35 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    implementation 'com.google.android.gms:play-services:11.0.1'
+
+    implementation 'com.google.android.gms:play-services-analytics:17.0.0'
+
+    implementation 'com.google.firebase:firebase-analytics:17.2.3'
+    implementation 'com.google.firebase:firebase-storage:11.0.1'
+    implementation 'com.google.firebase:firebase-common@[11.0.1]'
+//    implementation 'com.google.firebase:firebase-crash:19.3.0'
+//    implementation 'com.google.firebase:firebase-appindexing:19.3.0'
+//    implementation 'com.google.firebase:firebase-config:19.3.0'
+//    implementation 'com.google.firebase:firebase-analytics-impl:19.3.0'
+//    implementation 'com.google.firebase:firebase-dynamic-links:19.3.0'
+//    implementation 'com.google.firebase:firebase-auth:19.3.0'
+//    implementation 'com.google.firebase:firebase-database:19.3.0'
+//    implementation 'com.google.firebase:firebase-database-connection:19.3.0'
+//    implementation 'com.google.firebase:firebase-messaging:20.1.3'
+
+
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation 'com.google.android.gms:play-services:11.0.1'
-
-    implementation 'com.google.firebase:firebase-analytics:17.2.2'
-    implementation 'com.google.firebase:firebase-storage:11.0.1'
 
     // maybe need to remove
     //implementation 'com.google.android.gms:play-services-location:15.0.1'
     //implmentation "com.google.android.gms:play-services-location:11.0.1"
 }
+
+apply plugin: 'com.google.gms.google-services'
